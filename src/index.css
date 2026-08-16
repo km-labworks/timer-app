@@ -1,0 +1,209 @@
+/* =====================
+   Reset
+===================== */
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    "Inter",
+    "Noto Sans JP",
+    sans-serif;
+  background:
+    linear-gradient(
+      135deg,
+      #eef2ff,
+      #f8fafc
+    );
+  color: #1e293b;
+}
+
+/* =====================
+   App
+===================== */
+
+#root {
+  min-height: 100vh;
+}
+
+/* =====================
+   Header
+===================== */
+
+header {
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =====================
+   Tab Menu
+===================== */
+
+nav {
+  width: min(90%, 520px);
+  margin: 0 auto;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+nav button {
+  flex: 1;
+  padding: 14px 10px;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+nav button.active {
+    background: #333;
+    color: white;
+}
+
+nav button:hover {
+  background: #f1f5f9;
+}
+
+/* 選択中 */
+
+nav button:first-child {
+  background: #2563eb;
+  color:white;
+}
+
+/* =====================
+   Main Card
+===================== */
+
+
+main {
+  width: min(90%, 520px);
+  margin: 30px auto;
+  padding: 35px 25px;
+  background:white;
+  border-radius:24px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+main h2 {
+  margin-bottom:25px;
+  font-size:24px;
+}
+
+/* =====================
+   Timer Display
+===================== */
+
+.timer-display {
+  margin:30px 0;
+  font-size:64px;
+  font-weight:700;
+  letter-spacing:4px;
+  color:#0f172a;
+}
+
+/* =====================
+   Input
+===================== */
+
+.timer-input {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+}
+
+.timer-input input {
+  width:90px;
+  height:55px;
+  border: 2px solid #e2e8f0;
+  border-radius:12px;
+  font-size:22px;
+  text-align:center;
+  outline:none;
+  transition:.2s;
+}
+
+.timer-input input:focus {
+  border-color:#2563eb;
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* =====================
+   Buttons
+===================== */
+
+.button-area {
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+}
+
+.button-area button {
+  min-width:100px;
+  padding:14px 18px;
+  border:none;
+  border-radius:14px;
+  background:#2563eb;
+  color:white;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.button-area button:hover {
+  transform:translateY(-2px);
+  opacity:.9;
+}
+
+/* =====================
+   Mobile
+===================== */
+
+@media(max-width:600px){
+  header h1{font-size:26px;
+  }
+
+  nav button{
+    font-size:13px;
+  }
+
+  .timer-display{
+    font-size:48px;
+  }
+
+  .timer-input input{
+    width:70px;
+  }
+
+  .button-area{
+    flex-direction:column;
+  }
+
+  .button-area button{
+    width:100%;
+  }
+}
